@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI vs HUMAN | Elite Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">⚡ DETECT.AI</div>
+        <div class="nav-links">
+            <span>PROTOCOL</span>
+            <span>DATASET</span>
+            <span>ANALYSIS</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="hero-section">
+            <h2 class="subtitle">⚡ ADVANCED NEURAL ANALYSIS V1.0</h2>
+            <h1 class="main-title">EVERY WORD IS A SIGNAL.<br>WE DECODE THE ORIGIN.</h1>
+            <p class="description">Paste your text below. Receive the truth. No excuses. No compromise.</p>
+        </div>
+
+        <div class="input-card">
+            <textarea id="user-input" placeholder="INPUT REQUIRED: Paste a data stream of 20+ words for deep neural analysis..."></textarea>
+
+            <div class="action-bar">
+                <div id="status-note">Awaiting Input...</div>
+                <button onclick="sendMessage()" id="analyze-btn">
+                    <span class="btn-text">INITIATE ANALYSIS</span>
+                    <div class="loader" id="loader" style="display:none;"></div>
+                </button>
+            </div>
+        </div>
+
+        <div id="chat-box" class="results-area">
+            </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
